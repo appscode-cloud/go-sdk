@@ -20,3 +20,4 @@ func (c *Client) AdminCreateOrg(user string, opt CreateOrgOption) (*Organization
 	return org, c.getParsedResponse("POST", fmt.Sprintf("/admin/users/%s/orgs", user),
 		jsonHeader, bytes.NewReader(body), org)
 }
+
