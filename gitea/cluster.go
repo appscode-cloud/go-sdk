@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"time"
+	pharmerApi "github.com/pharmer/pharmer/apis/v1beta1"
 )
 
 // Cluster represents a repository
@@ -14,7 +15,7 @@ type Cluster struct {
 	Private       bool        `json:"private"`
 	Parent        *Cluster `json:"parent"`
 	Archived      bool        `json:"archived"`
-	Data          string    `json:"data"`
+	Data          pharmerApi.Cluster    `json:"data"`
 	OperationID   string `json:"operation_id"`
 	// swagger:strfmt date-time
 	Created time.Time `json:"created_at"`
@@ -39,7 +40,7 @@ type CreateClusterOption struct {
 	// unique: true
 	Name string `json:"name" binding:"Required;AlphaDashDot;MaxSize(100)"`
 	// Configuration of the cluster to create
-	Configuration string `json:"configuration" binding:"Required"`
+	Configuration pharmerApi.Cluster `json:"configuration" binding:"Required"`
 	// Whether the cluster is private
 	Private bool `json:"private"`
 }
