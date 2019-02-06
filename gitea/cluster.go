@@ -34,6 +34,10 @@ type ClusterMetadata struct {
 
 }
 
+type SSHConfigGetResponse struct {
+	Config *pharmerApi.SSHConfig `json:"config,omitempty"`
+}
+
 type ClusterMetadataResponse_KubedConfig struct {
 	//Version             *appscode_version.Version `json:"version,omitempty"`
 	SearchEnabled       bool                      `json:"searchEnabled,omitempty"`
