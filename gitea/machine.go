@@ -13,7 +13,7 @@ type Machine struct {
 	ClusterId      int64 `json:"cluster_id"`
 	Archived      bool        `json:"archived"`
 	Data          clusterapi.Machine   `json:"data"`
-	OperationID   string `json:"operation_id"`
+	OperationID   string `json:"operation_id,omitempty"`
 	// swagger:strfmt date-time
 	Created time.Time `json:"created_at"`
 	// swagger:strfmt date-time
