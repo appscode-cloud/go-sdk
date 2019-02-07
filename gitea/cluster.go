@@ -26,6 +26,21 @@ type Cluster struct {
 
 }
 
+type Certificate struct {
+	ID int64 `json:"id"`
+	Name       string `json:"name,omitempty"`
+	CommonName string `json:"common_name,omitempty"`
+	IssuedBy   string `json:"issued_by,omitempty"`
+	ValidFrom  int64  `json:"valid_from,omitempty"`
+	ExpireDate int64  `json:"expire_date,omitempty"`
+
+	Sans         []string `json:"sans,omitempty"`
+	Cert         string   `json:"cert,omitempty"`
+	Key          string   `json:"key,omitempty"`
+	Version      int32    `json:"version,omitempty"`
+	SerialNumber string   `json:"serial_number,omitempty"`
+}
+
 // ClusterMetadata represents metadata of a cluster
 type ClusterMetadata struct {
 	Config                    *ClusterMetadataResponse_KubedConfig                `json:"config,omitempty"`

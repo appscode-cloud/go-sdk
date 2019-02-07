@@ -1,5 +1,5 @@
 hash: 451be78ca473fd0fd216b81bdb26925a484d681e4492fe3f16b572070c79a41a
-updated: 2019-02-06T12:42:55.548656278+06:00
+updated: 2019-02-07T17:24:35.562818993+06:00
 imports:
 - name: github.com/appscode/go
   version: 52eaa8008e2e5fe8df77ac6fb2fd45e3ea2ae47c
@@ -167,7 +167,7 @@ imports:
   - pkg/registry/core/service/allocator
   - pkg/registry/core/service/ipallocator
 - name: sigs.k8s.io/cluster-api
-  version: e8e1ffa4627fdc5d236a28960ee2d9e1e9fcbe1e
+  version: 77046424d9b9b394c4f3929aed9605ba80d92715
   subpackages:
   - pkg/apis/cluster/common
   - pkg/apis/cluster/v1alpha1
