@@ -26,3 +26,9 @@ type LoadCertificateOptions struct {
 	CertData string `json:"cert" binding:"Required"`
 	KeyData  string `json:"key" binding:"Required"`
 }
+
+type DeployCertificateOptions struct {
+	SecretName string `json:"secret_name" binding:"Required"`
+	ClusterName string `json:"cluster_name" binding:"Required"`
+	Namespace string `json:"namespace"`
+}
