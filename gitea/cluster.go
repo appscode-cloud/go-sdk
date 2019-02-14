@@ -75,3 +75,8 @@ func (c *Client) CreateCluster(opt CreateClusterOption) (*Cluster, error) {
 	cluster := new(Cluster)
 	return cluster, c.getParsedResponse("POST", "/user/clusters", jsonHeader, bytes.NewReader(body), cluster)
 }
+
+type ImportClusterOption struct {
+	Provider string `json:"provider" binding:"Required"`
+	KubeConfig string `json:"kube_config" binding:"Required"`
+}
