@@ -79,4 +79,10 @@ func (c *Client) CreateCluster(opt CreateClusterOption) (*Cluster, error) {
 type ImportClusterOption struct {
 	Provider string `json:"provider" binding:"Required"`
 	KubeConfig string `json:"kube_config" binding:"Required"`
+	Region string `json:"region" binding:"Required"`
+	Zone string `json:"zone" binding:"Required"`
+	SSHKey string `json:"ssh_key"`
+	CredentialSecret string `json:"credential_secret" binding:"Requried"`
+	CredentialSecretNamespace string `json:"credential_secret_namespace" binding:"Requried"`
+
 }
