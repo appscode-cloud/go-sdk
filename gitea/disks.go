@@ -36,12 +36,10 @@ type PersistentVolumeClaim_PersistentVolumeClaimStatus struct {
 	Capacity    map[string]string `protobuf:"bytes,3,rep,name=capacity" json:"capacity,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 }
 
-
 type PersistentVolumeClaimSpec_ResourceRequirements struct {
 	Limits   map[string]string `protobuf:"bytes,1,rep,name=limits" json:"limits,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	Requests map[string]string `protobuf:"bytes,2,rep,name=requests" json:"requests,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 }
-
 
 type PersistentVolume struct {
 	Meta   *Meta                                    `protobuf:"bytes,1,opt,name=meta" json:"meta,omitempty"`
@@ -62,10 +60,10 @@ type Meta struct {
 }
 
 type PersistentVolume_PersistentVolumeSpec struct {
-	Capacity                      map[string]string                          `protobuf:"bytes,1,rep,name=capacity" json:"capacity,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	AccessModes                   []string                                   `protobuf:"bytes,2,rep,name=access_modes,json=accessModes" json:"access_modes,omitempty"`
-	PersistentVolumeReclaimPolicy string                                     `protobuf:"bytes,3,opt,name=persistent_volume_reclaim_policy,json=persistentVolumeReclaimPolicy" json:"persistent_volume_reclaim_policy,omitempty"`
-	ClaimRef                      *ObjectReference                           `protobuf:"bytes,4,opt,name=claim_ref,json=claimRef" json:"claim_ref,omitempty"`
+	Capacity                      map[string]string            `protobuf:"bytes,1,rep,name=capacity" json:"capacity,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	AccessModes                   []string                     `protobuf:"bytes,2,rep,name=access_modes,json=accessModes" json:"access_modes,omitempty"`
+	PersistentVolumeReclaimPolicy string                       `protobuf:"bytes,3,opt,name=persistent_volume_reclaim_policy,json=persistentVolumeReclaimPolicy" json:"persistent_volume_reclaim_policy,omitempty"`
+	ClaimRef                      *ObjectReference             `protobuf:"bytes,4,opt,name=claim_ref,json=claimRef" json:"claim_ref,omitempty"`
 	PersistentVolumeSource        *core.PersistentVolumeSource `protobuf:"bytes,5,opt,name=persistent_volume_source,json=persistentVolumeSource" json:"persistent_volume_source,omitempty"`
 }
 
@@ -78,13 +76,11 @@ type ObjectReference struct {
 	ResourceVersion string `protobuf:"bytes,6,opt,name=resource_version,json=resourceVersion" json:"resource_version,omitempty"`
 }
 
-
 type PersistentVolume_PersistentVolumeStatus struct {
 	Phase   string `protobuf:"bytes,1,opt,name=phase" json:"phase,omitempty"`
 	Message string `protobuf:"bytes,2,opt,name=message" json:"message,omitempty"`
 	Reason  string `protobuf:"bytes,3,opt,name=reason" json:"reason,omitempty"`
 }
-
 
 type CreateDiskOption struct {
 	Name     string `json:"name,omitempty"`
@@ -92,7 +88,6 @@ type CreateDiskOption struct {
 	DiskType string `json:"disk_type,omitempty"`
 	SizeGb   int64  `json:"size_gb,omitempty"`
 }
-
 
 type DescribeDiskOption struct {
 	Name     string `json:"name,omitempty"`
@@ -104,7 +99,7 @@ type DescribeDiskResponse struct {
 }
 
 type DeleteDiskOption struct {
-	Uid     string `json:"uid,omitempty"`
+	Uid string `json:"uid,omitempty"`
 }
 
 type ListDiskRequest struct {

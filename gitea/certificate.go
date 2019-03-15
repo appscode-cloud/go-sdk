@@ -1,7 +1,7 @@
 package gitea
 
 type Certificate struct {
-	ID            int64       `json:"id"`
+	ID         int64  `json:"id"`
 	Name       string `json:"name,omitempty"`
 	CommonName string `json:"common_name,omitempty"`
 	IssuedBy   string `json:"issued_by,omitempty"`
@@ -17,8 +17,6 @@ type Certificate struct {
 	SerialNumber string   `json:"serial_number,omitempty"`
 }
 
-
-
 type LoadCertificateOptions struct {
 	// required: true
 	// unique: true
@@ -28,7 +26,7 @@ type LoadCertificateOptions struct {
 }
 
 type DeployCertificateOptions struct {
-	SecretName string `json:"secret_name" binding:"Required"`
+	SecretName  string `json:"secret_name" binding:"Required"`
 	ClusterName string `json:"cluster_name" binding:"Required"`
-	Namespace string `json:"namespace"`
+	Namespace   string `json:"namespace"`
 }
