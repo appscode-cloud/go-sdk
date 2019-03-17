@@ -1,4 +1,0 @@
-package: code.gitea.io/sdk
-import:
-- package: github.com/pharmer/pharmer
-  version: clusterapi

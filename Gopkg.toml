@@ -1,0 +1,45 @@
+
+ignored = ["google.golang.org/appengine*"]
+
+[prune]
+  go-tests = true
+  unused-packages = true
+  non-go = true
+
+[[override]]
+  name = "k8s.io/api"
+  version = "kubernetes-1.13.0"
+
+[[override]]
+  name = "k8s.io/apimachinery"
+  branch = "ac-1.13.0"
+  source = "github.com/kmodules/apimachinery"
+
+[[override]]
+  name = "k8s.io/client-go"
+  version = "=v10.0.0"
+
+[[override]]
+  name = "gopkg.in/yaml.v2"
+  version = "=v2.2.1"
+
+[[override]]
+  name = "sigs.k8s.io/yaml"
+  version = "=v1.1.0"
+
+[[override]]
+  name = "sigs.k8s.io/cluster-api"
+  revision = "26aa37ad8bcffd5b69e2a514b5e9a8ac30744134"
+
+[[override]]
+  name = "github.com/pharmer/pharmer"
+  revision = "006bbae3741e75a6b446eaa7ff08b0bf0a1d8de6"
+  source = "git@github.com:appscode-cloud/pharmer.git"
+
+[[override]]
+  name = "github.com/gogo/protobuf"
+  version = "=v1.1.0"
+
+[[override]]
+  name = "github.com/golang/protobuf"
+  version = "=v1.1.0"
