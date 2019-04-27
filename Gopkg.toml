@@ -33,7 +33,7 @@ ignored = ["google.golang.org/appengine*"]
 
 [[override]]
   name = "github.com/pharmer/pharmer"
-  revision = "006bbae3741e75a6b446eaa7ff08b0bf0a1d8de6"
+  revision = "4aec4c2e2b481199bacc034363cc43e02c02a81d"
   source = "git@github.com:appscode-cloud/pharmer.git"
 
 [[override]]
@@ -43,3 +43,7 @@ ignored = ["google.golang.org/appengine*"]
 [[override]]
   name = "github.com/golang/protobuf"
   version = "=v1.1.0"
+
+[[override]]
+  name = "github.com/pharmer/cloud"
+  branch = "master"

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"time"
 
-	pharmerApi "github.com/pharmer/pharmer/apis/v1beta1"
+	pharmerapi "github.com/pharmer/pharmer/apis/v1beta1"
 )
 
 // Cluster represents a kubernetes cluster
@@ -16,7 +16,7 @@ type Cluster struct {
 	Private     bool               `json:"private"`
 	Parent      *Cluster           `json:"parent"`
 	Archived    bool               `json:"archived"`
-	Data        pharmerApi.Cluster `json:"data"`
+	Data        pharmerapi.Cluster `json:"data"`
 	OperationID string             `json:"operation_id,omitempty"`
 	// swagger:strfmt date-time
 	Created time.Time `json:"created_at"`
@@ -30,11 +30,11 @@ type Cluster struct {
 type ClusterMetadata struct {
 	Config                    *ClusterMetadataResponse_KubedConfig `json:"config,omitempty"`
 	CustomResourceDefinitions []string                             `json:"customResourceDefinitions,omitempty"`
-	Upgrades                  []*pharmerApi.Upgrade                `json:"upgrades,omitempty"`
+	Upgrades                  []*pharmerapi.Upgrade                `json:"upgrades,omitempty"`
 }
 
 type SSHConfigGetResponse struct {
-	Config *pharmerApi.SSHConfig `json:"config,omitempty"`
+	Config *pharmerapi.SSHConfig `json:"config,omitempty"`
 }
 
 type ClusterMetadataResponse_KubedConfig struct {
@@ -58,7 +58,7 @@ type CreateClusterOption struct {
 	// unique: true
 	Name string `json:"name" binding:"Required;AlphaDashDot;MaxSize(100)"`
 	// Configuration of the cluster to create
-	Configuration pharmerApi.Cluster `json:"configuration" binding:"Required"`
+	Configuration pharmerapi.Cluster `json:"configuration" binding:"Required"`
 	// Whether the cluster is private
 	Private bool `json:"private"`
 }

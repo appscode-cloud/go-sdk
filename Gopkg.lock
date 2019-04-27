@@ -92,11 +92,19 @@
   version = "1.0.1"
 
 [[projects]]
-  digest = "1:b8caf055df8bce7168d8747ecb1d357546702135ad2e7cdc305309a4fa28e55d"
+  branch = "master"
+  digest = "1:0d3d01b034869881234c7120e348aae830ad11c2dd801b62bab700d3ff6fd895"
+  name = "github.com/pharmer/cloud"
+  packages = ["pkg/apis/cloud/v1"]
+  pruneopts = "NUT"
+  revision = "fe0ce4034eceaa157b6a5bb4b5e3a19701c65441"
+
+[[projects]]
+  digest = "1:b45b860c289db42a8a9835f4ade617beee645d2056f476fa1cda286c21854007"
   name = "github.com/pharmer/pharmer"
   packages = ["apis/v1beta1"]
   pruneopts = "NUT"
-  revision = "006bbae3741e75a6b446eaa7ff08b0bf0a1d8de6"
+  revision = "4aec4c2e2b481199bacc034363cc43e02c02a81d"
   source = "git@github.com:appscode-cloud/pharmer.git"
 
 [[projects]]
@@ -314,15 +322,14 @@
   version = "v1.13.4"
 
 [[projects]]
-  digest = "1:9eef8dcbd5999bce0c1ef317fdab7bd65edc89803180d981284375e336b7f46d"
+  digest = "1:0205cc0386d21006509083b30422d4da96d0fd7ea71d11a7a1e7c2e5eab9f18a"
   name = "sigs.k8s.io/cluster-api"
   packages = [
     "pkg/apis/cluster/common",
     "pkg/apis/cluster/v1alpha1",
   ]
   pruneopts = "NUT"
-  revision = "3547f8dd93078c0b0f0b221ee1c2a57f96673081"
-  version = "0.0.0-alpha.4"
+  revision = "26aa37ad8bcffd5b69e2a514b5e9a8ac30744134"
 
 [[projects]]
   digest = "1:84a8609383bec11b71d52dd813f33f1d16614b91966940bdc2aa79bea864fa25"
@@ -344,6 +351,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/pharmer/cloud/pkg/apis/cloud/v1",
     "github.com/pharmer/pharmer/apis/v1beta1",
     "k8s.io/api/core/v1",
     "sigs.k8s.io/cluster-api/pkg/apis/cluster/v1alpha1",
