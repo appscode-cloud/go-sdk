@@ -3,22 +3,15 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:574094b482e9fbc62af57f838f8ea08a2aef8cfd5800a18eaaa44648263df4e7"
+  digest = "1:ba2e5b69d353328af0bc90520bdfacd9c2a293898aa5024996a3af478c20f27a"
   name = "github.com/appscode/go"
   packages = [
     "context",
     "log",
+    "sets",
   ]
   pruneopts = "NUT"
   revision = "52eaa8008e2e5fe8df77ac6fb2fd45e3ea2ae47c"
-
-[[projects]]
-  branch = "master"
-  digest = "1:c56aa8d53ee875097474e62cf6ab4e69b027fe7aad34f68c72c76d90589d7132"
-  name = "github.com/appscode/go-version"
-  packages = ["."]
-  pruneopts = "NUT"
-  revision = "7aba545c679b0f45679eeb406dc662d2c8a04c26"
 
 [[projects]]
   digest = "1:8679b8a64f3613e9749c5640c3535c83399b8e69f67ce54d91dc73f6d77373af"
@@ -92,14 +85,6 @@
   version = "1.0.1"
 
 [[projects]]
-  digest = "1:b8caf055df8bce7168d8747ecb1d357546702135ad2e7cdc305309a4fa28e55d"
-  name = "github.com/pharmer/pharmer"
-  packages = ["apis/v1beta1"]
-  pruneopts = "NUT"
-  revision = "006bbae3741e75a6b446eaa7ff08b0bf0a1d8de6"
-  source = "git@github.com:appscode-cloud/pharmer.git"
-
-[[projects]]
   digest = "1:14715f705ff5dfe0ffd6571d7d201dd8e921030f8070321a79380d8ca4ec1a24"
   name = "github.com/pkg/errors"
   packages = ["."]
@@ -109,18 +94,9 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:058e9504b9a79bfe86092974d05bb3298d2aa0c312d266d43148de289a5065d9"
-  name = "golang.org/x/crypto"
-  packages = ["ssh/terminal"]
-  pruneopts = "NUT"
-  revision = "a1f597ede03a7bef967a422b5b3a5bd08805a01e"
-
-[[projects]]
-  branch = "master"
-  digest = "1:7b6b4c1f7f696cb93aeac06a17a678c26a36e3069fe57232bf73ea8561503511"
+  digest = "1:18108bc7e384e395b4805632a637405a3df71fa518e22f9b39b0c08b89a52b96"
   name = "golang.org/x/net"
   packages = [
-    "context/ctxhttp",
     "http/httpguts",
     "http2",
     "http2/hpack",
@@ -128,28 +104,6 @@
   ]
   pruneopts = "NUT"
   revision = "9f648a60d9775ef5c977e7669d1673a7a67bef33"
-
-[[projects]]
-  branch = "master"
-  digest = "1:13d575ad6576f56693a410e77830da614005f87955e7cd2ac6afbf9b54afd651"
-  name = "golang.org/x/oauth2"
-  packages = [
-    ".",
-    "internal",
-  ]
-  pruneopts = "NUT"
-  revision = "e64efc72b421e893cbf63f17ba2221e7d6d0b0f3"
-
-[[projects]]
-  branch = "master"
-  digest = "1:c2513fd34918332dd2efb9ef1bd70a8852afb78d688219f0c25a36c18094497b"
-  name = "golang.org/x/sys"
-  packages = [
-    "unix",
-    "windows",
-  ]
-  pruneopts = "NUT"
-  revision = "a2f829d7f35f2ed1c3520c553a6226495455cae0"
 
 [[projects]]
   digest = "1:e7071ed636b5422cc51c0e3a6cebc229d6c9fffc528814b519a980641422d619"
@@ -176,11 +130,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:9fdc2b55e8e0fafe4b41884091e51e77344f7dc511c5acedcfd98200003bff90"
-  name = "golang.org/x/time"
-  packages = ["rate"]
+  digest = "1:b06aa0b7549bcfd88ecc2d3ae0398ed2151820196216d69ab405ed5933e86246"
+  name = "gomodules.xyz/version"
+  packages = ["."]
   pruneopts = "NUT"
-  revision = "9d24e82272b4f38b78bc8cff74fa936d31ccd8ef"
+  revision = "7cec7ee542d33f2f96567de581394bb157684337"
 
 [[projects]]
   digest = "1:2d1fbdc6777e5408cabeb02bf336305e724b925ff4546ded0fa8715a7267922a"
@@ -208,10 +162,9 @@
 
 [[projects]]
   branch = "ac-1.13.0"
-  digest = "1:5e8c1d0201e62c96a7bbd554f1024ae11b3856294b7d202cb2f80c516a547cc7"
+  digest = "1:4a821c3b536ce8f65135b99e26f0037057a64a0cc5cfd0d15078ca80ec581a6f"
   name = "k8s.io/apimachinery"
   packages = [
-    "pkg/api/errors",
     "pkg/api/resource",
     "pkg/apis/config",
     "pkg/apis/meta/internalversion",
@@ -229,11 +182,9 @@
     "pkg/runtime/serializer/json",
     "pkg/runtime/serializer/protobuf",
     "pkg/runtime/serializer/recognizer",
-    "pkg/runtime/serializer/streaming",
     "pkg/runtime/serializer/versioning",
     "pkg/selection",
     "pkg/types",
-    "pkg/util/clock",
     "pkg/util/errors",
     "pkg/util/framer",
     "pkg/util/intstr",
@@ -246,7 +197,6 @@
     "pkg/util/validation/field",
     "pkg/util/version",
     "pkg/util/yaml",
-    "pkg/version",
     "pkg/watch",
     "third_party/forked/golang/reflect",
   ]
@@ -255,24 +205,9 @@
   source = "github.com/kmodules/apimachinery"
 
 [[projects]]
-  digest = "1:3da991fa7b534932b6746f7b6f044c35f9ff0b7727e93f230f754146fb6227f1"
+  digest = "1:18e61248b98730a03f39f9688483ee3afc36e23295b60d31effc7221ab3db538"
   name = "k8s.io/client-go"
-  packages = [
-    "pkg/apis/clientauthentication",
-    "pkg/apis/clientauthentication/v1alpha1",
-    "pkg/apis/clientauthentication/v1beta1",
-    "pkg/version",
-    "plugin/pkg/client/auth/exec",
-    "rest",
-    "rest/watch",
-    "tools/clientcmd/api",
-    "tools/metrics",
-    "transport",
-    "util/cert",
-    "util/connrotation",
-    "util/flowcontrol",
-    "util/integer",
-  ]
+  packages = ["tools/clientcmd/api"]
   pruneopts = "NUT"
   revision = "e64494209f554a6723674bd494d69445fb76a1d4"
   version = "v10.0.0"
@@ -314,15 +249,33 @@
   version = "v1.13.4"
 
 [[projects]]
-  digest = "1:9eef8dcbd5999bce0c1ef317fdab7bd65edc89803180d981284375e336b7f46d"
+  digest = "1:ff55b05e15c06cd16e106c8937e02efbba157c340bbc4f700adef3ec3b8b3e50"
+  name = "pharmer.dev/cloud"
+  packages = [
+    "pkg/apis/cloud",
+    "pkg/apis/cloud/v1",
+  ]
+  pruneopts = "NUT"
+  revision = "ac27cc24b5bd1a63d6dbaa98fc53c8d7f9abdcad"
+  version = "v0.3.0"
+
+[[projects]]
+  digest = "1:07bb30d5ef434246f64523eb69f0edbfa0621d123aafcf4a11339f37debc5dd0"
+  name = "pharmer.dev/pharmer"
+  packages = ["apis/v1beta1"]
+  pruneopts = "NUT"
+  revision = "0cb7be43b8d124de1479f12b4253ca4f3b62d776"
+  version = "v0.4.0"
+
+[[projects]]
+  digest = "1:0205cc0386d21006509083b30422d4da96d0fd7ea71d11a7a1e7c2e5eab9f18a"
   name = "sigs.k8s.io/cluster-api"
   packages = [
     "pkg/apis/cluster/common",
     "pkg/apis/cluster/v1alpha1",
   ]
   pruneopts = "NUT"
-  revision = "3547f8dd93078c0b0f0b221ee1c2a57f96673081"
-  version = "0.0.0-alpha.4"
+  revision = "26aa37ad8bcffd5b69e2a514b5e9a8ac30744134"
 
 [[projects]]
   digest = "1:84a8609383bec11b71d52dd813f33f1d16614b91966940bdc2aa79bea864fa25"
@@ -344,8 +297,9 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/pharmer/pharmer/apis/v1beta1",
     "k8s.io/api/core/v1",
+    "pharmer.dev/cloud/pkg/apis/cloud/v1",
+    "pharmer.dev/pharmer/apis/v1beta1",
     "sigs.k8s.io/cluster-api/pkg/apis/cluster/v1alpha1",
   ]
   solver-name = "gps-cdcl"
