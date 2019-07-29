@@ -260,12 +260,12 @@
   version = "v0.3.0"
 
 [[projects]]
-  digest = "1:07bb30d5ef434246f64523eb69f0edbfa0621d123aafcf4a11339f37debc5dd0"
+  digest = "1:b3f5425acd3f21347c55cd85c083de56e840a22664532d20b1334f16d32d9e40"
   name = "pharmer.dev/pharmer"
-  packages = ["apis/v1beta1"]
+  packages = ["apis/v1alpha1"]
   pruneopts = "NUT"
-  revision = "0cb7be43b8d124de1479f12b4253ca4f3b62d776"
-  version = "v0.4.0"
+  revision = "cc716e1fb77d95565c4f96fc9f5d67b5a46620a9"
+  version = "v0.5.0"
 
 [[projects]]
   digest = "1:0205cc0386d21006509083b30422d4da96d0fd7ea71d11a7a1e7c2e5eab9f18a"
@@ -299,7 +299,7 @@
   input-imports = [
     "k8s.io/api/core/v1",
     "pharmer.dev/cloud/pkg/apis/cloud/v1",
-    "pharmer.dev/pharmer/apis/v1beta1",
+    "pharmer.dev/pharmer/apis/v1alpha1",
     "sigs.k8s.io/cluster-api/pkg/apis/cluster/v1alpha1",
   ]
   solver-name = "gps-cdcl"

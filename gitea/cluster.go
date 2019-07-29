@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"time"
 
-	pharmerApi "pharmer.dev/pharmer/apis/v1beta1"
+	pharmerApi "pharmer.dev/pharmer/apis/v1alpha1"
 )
 
 // Cluster represents a kubernetes cluster
